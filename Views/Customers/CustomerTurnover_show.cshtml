@@ -1,0 +1,61 @@
+﻿@model IEnumerable<ExamProject.Models.CustomerTurnoverTry_Result>
+
+@{
+    ViewBag.Title = "CustomerTurnover_show";
+}
+
+<h2>Customer Turnover</h2>
+<style>
+    body {
+        background-color: wheat;
+    }
+</style>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>     
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.turnover)
+        </th>       
+      
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.FirstName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LastName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Phone)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Email)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Fax)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.turnover)
+    </td>
+    
+</tr>
+}
+
+</table>

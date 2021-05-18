@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ExamProject.Models.BestArtistsAlbums_Result>
+
+@{
+    ViewBag.Title = "ArtistBestAlbum_show";
+}
+<style>
+    body {
+        background-color: wheat;
+    }
+</style>
+<h2>Best Artists </h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+       
+    </tr>
+}
+
+</table>

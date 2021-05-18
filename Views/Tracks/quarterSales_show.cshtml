@@ -1,0 +1,68 @@
+﻿@model IEnumerable<ExamProject.Models.quarterSales_Result>
+
+@{
+    ViewBag.Title = "quarterSales_show";
+}
+<style>
+    body {
+        background-color: wheat;
+    }
+</style>
+<h2>quarter Sales</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Year)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sales1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sales2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sales3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sales4)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Name1)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Year)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Sales1)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Sales2)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Sales3)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Sales4)
+    </td>
+
+</tr>
+}
+
+</table>

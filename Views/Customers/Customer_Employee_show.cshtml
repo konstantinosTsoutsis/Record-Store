@@ -1,0 +1,56 @@
+﻿@model IEnumerable<ExamProject.Models.Customer_Employee_Result>
+
+@{
+    ViewBag.Title = "Customer_Employee_show";
+}
+
+<h2>Customer Employee </h2>
+<style>
+    body {
+        background-color: wheat;
+    }
+</style>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.InvoiceId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName1)
+        </th>
+
+
+
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.InvoiceId)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.FirstName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LastName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.FirstName1)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LastName1)
+    </td>
+
+</tr>
+}
+
+</table>

@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<link href="~/Content/Site.css" rel="stylesheet" />
+<style>
+    body {
+        background-image: url("https://www.departures.com/sites/default/files/styles/responsive_900x600/public/1586454610/collection-vinyl-records-on-shelf-BUYVINYL0420.jpg?itok=YiToJBay");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+<div class="links">
+    @Html.ActionLink("Artists", "Index", "Artists", null, new { @class = "NavLink" })
+    @Html.ActionLink("Albums", "Index", "Albums", null, new { @class = "NavLink" })
+    @Html.ActionLink("Tracks", "Index", "Tracks", null, new { @class = "NavLink" })
+    @Html.ActionLink("Customers", "Index", "Customers", null, new { @class = "NavLink" })
+    @Html.ActionLink("Employees", "Index", "Employees", null, new { @class = "NavLink" })
+    @Html.ActionLink("Genres", "Index", "Genres", null, new { @class = "NavLink" })
+    @Html.ActionLink("InvoiceLines", "Index", "InvoiceLines", null, new { @class = "NavLink" })
+    @Html.ActionLink("Invoices", "Index", "Invoices", null, new { @class = "NavLink" })
+    @Html.ActionLink("MediaTypes", "Index", "MediaTypes", null, new { @class = "NavLink" })
+    <div class="dropdown">
+        <button class="dropbtn">SEARCH</button>
+        <div class="dropdown-content">
+            <a @Html.ActionLink("Artists with the best albums", "ArtistBestAlbum", "Artists")</a>
+            <a @Html.ActionLink("Top 10 tracks", "Top10Tracks", "Tracks") </a>
+            <a @Html.ActionLink("Top 3 genres", "Top3Genres", "Genres") </a>
+            <a @Html.ActionLink("Customer and  Turnover", "CustomerTurnover", "Customers")</a>
+            <a @Html.ActionLink("Customer and Employee", "Customer_Employee", "Customers")</a>
+            <a @Html.ActionLink("Quarter Sales", "quarterSales", "Tracks")</a>
+            
+
+        </div>
+    </div>
+
+</div>
+

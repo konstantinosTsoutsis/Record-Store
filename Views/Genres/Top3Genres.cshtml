@@ -1,0 +1,32 @@
+﻿@model IEnumerable<ExamProject.Models.Genre>
+
+@{
+    ViewBag.Title = "Top3Genres";
+}
+<style>
+    body {
+        background-color: wheat;
+    }
+</style>
+
+<h2>Top 3 Genres</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+       
+    </tr>
+}
+
+</table>

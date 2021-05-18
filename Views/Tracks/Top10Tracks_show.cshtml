@@ -1,0 +1,36 @@
+﻿@model IEnumerable<ExamProject.Models.Top10Tracks_Result>
+
+@{
+    ViewBag.Title = "Top10Tracks_show";
+}
+<style>
+    body {
+        background-color: wheat;
+    }
+</style>
+<h2>Top 10 Tracks</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+     
+    </tr>
+
+@foreach (var item in Model) {
+ 
+    
+<tr>
+
+    <td>
+         @Html.DisplayFor(modelItem => item.Name)
+
+    </td>
+   
+</tr>
+    
+}
+
+</table>
